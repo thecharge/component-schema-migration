@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WellCart Platform
+ *
+ * @copyright    Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license      http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+-->
+<ruleset name="WellCart coding standard">
+    <description>WellCart coding standard</description>
+
+    <!-- display progress -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <rule ref="PSR2">
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+    </rule>
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+        <properties>
+            <property name="ignoreBlankLines" value="false"/>
+        </properties>
+    </rule>
+    <!-- Import Zend coding standard (which in turn imports PEAR) -->
+    <rule ref="Zend">
+        <!-- but exclude their code analyzer -->
+        <exclude name="Zend.Debug.CodeAnalyzer"/>
+
+        <!-- covered by Squiz ControlSignature, which enforces try/catch as well -->
+        <exclude name="PEAR.ControlStructures.ControlSignature"/>
+
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
+
+        <!-- do not check line length -->
+        <exclude name="Generic.Files.LineLength"/>
+    </rule>
+
+    <!-- Don't enforce Zend's private member underscores -->
+    <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Ignore variables that contains numbers -->
+    <rule ref="Zend.NamingConventions.ValidVariableName.ContainsNumbers">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Paths to check -->
+    <file>./config</file>
+    <file>./config/phinx.php</file>
+    <file>./src</file>
+    <file>./tests/unit</file>
+</ruleset>

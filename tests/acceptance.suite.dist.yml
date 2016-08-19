@@ -1,0 +1,16 @@
+#
+# WellCart Platform
+#
+# @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+# @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: WellCart\SchemaMigration\Test\AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: http://wellcart.local
+        - \WellCart\SchemaMigration\Test\Helper\Acceptance

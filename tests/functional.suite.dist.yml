@@ -1,0 +1,15 @@
+#
+# WellCart Platform
+#
+# @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+# @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+#
+# Suite for functional (integration) tests
+# Emulate web requests and make application process them
+# Include one of framework modules (Symfony2, Yii2, Laravel5) to use it
+
+class_name: WellCart\SchemaMigration\Test\FunctionalTester
+modules:
+    enabled:
+        # add framework module here
+        - \WellCart\SchemaMigration\Test\Helper\Functional

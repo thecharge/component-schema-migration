@@ -1,0 +1,59 @@
+#
+# WellCart Platform
+#
+# @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+# @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+#
+language: php
+
+php:
+  - 7.0
+  - 7.1
+
+env:
+  - DB=mysql DB_DRIVER=pdo_mysql DB_PORT=3306 DB_USERNAME=root
+  - DB=pgsql DB_DRIVER=pdo_pgsql DB_PORT=5432 DB_USERNAME=postgres
+
+dist: trusty
+sudo: required
+
+services:
+  - mongodb
+  - rabbitmq
+  - memcached
+addons:
+  postgresql: "9.1"
+  apt:
+    packages:
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6  
+
+before_install:
+  - composer self-update && composer --version
+  - composer install
+  - sh -c "if [ '$DB' = 'mysql' ]; then mysql -u root -e 'CREATE DATABASE IF NOT EXISTS wellcart;'; fi"
+  - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'CREATE DATABASE wellcart;' -U postgres; fi"
+  - chmod 0777 ./bin/
+  - chmod 0777 ./bin/wellcart
+  - chmod 0777 ./bin/wellcart-schema-migration
+  - bin/wellcart wellcart:setup --db-driver=$DB_DRIVER --db-host=127.0.0.1 --db-port=$DB_PORT --db-name=wellcart --db-username=$DB_USERNAME --admin-email=test@example.com --admin-password=qa123123 --admin-first-name=Tester --admin-last-name=Account --base-path=http://localhost/ --website-name=Testing
+  - composer show
+
+before_script:
+  - cd tests
+
+script: ../bin/phpunit
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover report/clover.xml
+  - ../bin/coveralls
+  - sh -c "if [ '$DB' = 'mysql' ]; then mysql -u root -e 'DROP DATABASE IF EXISTS wellcart'; fi"
+  - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'DROP DATABASE IF EXISTS wellcart;' -U postgres; fi"
+
+matrix:
+  fast_finish: true
+
+notifications:
+  email: false

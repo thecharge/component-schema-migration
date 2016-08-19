@@ -1,0 +1,18 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+return array(
+    'db' => array(
+        'driver' => 'pdo_mysql',
+        'username' => 'travis',
+        'password' => '',
+        'port' => 3306,
+        'host' => '127.0.0.1',
+        'database' => 'wellcart',
+    ),
+);

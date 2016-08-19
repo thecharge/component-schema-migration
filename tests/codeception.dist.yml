@@ -1,0 +1,32 @@
+#
+# WellCart Platform
+#
+# @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+# @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+#
+namespace: WellCart\SchemaMigration
+actor: Tester
+paths:
+    tests: ./
+    support: ./support
+    log: ./data/logs
+    data: ./data/db/seeds
+    envs: envs
+settings:
+    no-rebuild: true
+    bootstrap: bootstrap.php
+    colors: true
+    memory_limit: 1024M
+    backup_globals: true
+coverage:
+    enabled: true
+    remote: false
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+   enabled:
+       - PhpBrowser:
+           url: 'http://wellcart.local'
+           curl:
+               CURLOPT_RETURNTRANSFER: true
