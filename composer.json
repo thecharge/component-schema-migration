@@ -27,18 +27,11 @@
     }
   },
   "scripts": {
-    "post-autoload-dump": [
-      "php -r \"chmod('tests/config/autoload', 0777);\"",
-      "php -r \"chmod('tests/public/assets', 0777);\"",
-      "php -r \"chmod('tests/public/themes', 0777);\"",
-      "php -r \"chmod('tests/public/media', 0777);\"",
-      "php -r \"chmod('tests/data', 0777);\"",
-      "php -r \"chmod('tests/data/cache', 0777);\"",
-      "php -r \"chmod('tests/data/logs', 0777);\"",
-      "php -r \"chmod('tests/data/db/migrations', 0777);\"",
-      "php -r \"chmod('tests/data/db/seeds', 0777);\"",
-      "php -r \"chmod('tests/data/sessions', 0777);\"",
-      "php -r \"chmod('tests/data/upload', 0777);\""
+    "post-install-cmd": [
+      "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
+    ],
+    "post-update-cmd": [
+      "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
     ],
     "test": "codecept run",
     "coveralls": "coveralls",
