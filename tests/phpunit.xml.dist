@@ -7,7 +7,10 @@
  * @license      http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 -->
-<phpunit bootstrap="./bootstrap.php"
+<phpunit
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.5/phpunit.xsd"
+         bootstrap="./bootstrap.php"
          backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
