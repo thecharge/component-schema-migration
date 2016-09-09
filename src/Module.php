@@ -12,6 +12,7 @@ namespace WellCart\SchemaMigration;
 
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
+use WellCart\ModuleManager\ModuleConfiguration;
 use Zend\Console\Adapter\AdapterInterface as Console;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
@@ -58,9 +59,12 @@ class Module implements
         ];
     }
 
+    /**
+     * @return ModuleConfiguration
+     */
     public function getConfig()
     {
-        return include __DIR__ . '/../config/module.config.php';
+        return new ModuleConfiguration([], true, __DIR__ . '/../config');
     }
 
     /**
