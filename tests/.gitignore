@@ -8,3 +8,5 @@ codeception.yml
 *.suite.yml
 installed.php
 /report
+/data
+/public

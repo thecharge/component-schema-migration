@@ -28,9 +28,11 @@
   },
   "scripts": {
     "post-install-cmd": [
+      "WellCart\\Setup\\Composer\\ScriptHandler::createProjectDirectories",
       "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
     ],
     "post-update-cmd": [
+      "WellCart\\Setup\\Composer\\ScriptHandler::createProjectDirectories",
       "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
     ],
     "coveralls": "coveralls",
