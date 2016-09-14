@@ -13,6 +13,10 @@ composer.lock
 /vendor
 /report
 /bin
+apigility-ui
 *~
 clover.xml
+codeception.yml
+*.suite.yml
+maintenance.flag
 .env

@@ -5,6 +5,7 @@ application.config.php
 db.global.php
 phpunit.xml
 codeception.yml
+maintenance.flag
 *.suite.yml
 installed.php
 /report
