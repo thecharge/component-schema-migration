@@ -31,9 +31,13 @@ class ModuleTest extends TestCase
 
     public function testGetConfig()
     {
-        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
+        $this->assertInstanceOf(
+            ModuleConfiguration::class, $this->object->getConfig()
+        );
         $_ENV['WELLCART_APPLICATION_CONTEXT'] = Application::CONTEXT_API;
-        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
+        $this->assertInstanceOf(
+            ModuleConfiguration::class, $this->object->getConfig()
+        );
     }
 
     public function testGetAbsolutePath()
