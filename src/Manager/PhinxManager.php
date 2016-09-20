@@ -12,7 +12,6 @@ namespace WellCart\SchemaMigration\Manager;
 
 use Zend\Console\Adapter\AbstractAdapter as ConsoleAdapter;
 use Zend\Console\ColorInterface;
-use Zend\Console\Prompt;
 
 class PhinxManager implements ColorInterface
 {

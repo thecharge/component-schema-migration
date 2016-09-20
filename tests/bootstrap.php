@@ -76,14 +76,14 @@ class Bootstrap
 
         defined('WELLCART_ROOT')
         || define(
-        'WELLCART_ROOT', (getenv('WELLCART_ROOT')
+            'WELLCART_ROOT', (getenv('WELLCART_ROOT')
             ? getenv('WELLCART_ROOT')
             : str_replace('\\', '/', __DIR__) . '/')
         );
 
         defined('WELLCART_BIN_PATH')
         || define(
-        'WELLCART_BIN_PATH', (getenv('WELLCART_BIN_PATH') ? getenv(
+            'WELLCART_BIN_PATH', (getenv('WELLCART_BIN_PATH') ? getenv(
             'WELLCART_BIN_PATH'
         ) : static::findParentPath('bin'))
         );
