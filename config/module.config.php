@@ -10,8 +10,11 @@ namespace WellCart\SchemaMigration;
 
 return [
     'controllers'      => [
+        'aliases' => [
+            'SchemaMigration::Console' => Controller\ConsoleController::class,
+        ],
         'invokables' => [
-            'WellCart\SchemaMigration\Controller\Console' => 'WellCart\SchemaMigration\Controller\ConsoleController',
+            Controller\ConsoleController::class => Controller\ConsoleController::class,
         ],
     ],
     'console'          => [
@@ -21,7 +24,7 @@ return [
                     'options' => [
                         'route'    => 'wellcart:schema-migration [<c1>] [<c2>] [<c3>] [<c4>] [<c5>] [--help|-h] [--quiet|-q] [--verbose|-v] [--version|-V] [--ansi] [--no-ansi] [--no-interaction|-n] [--configuration|-c] [--xml] [--raw] [--environment|-e] [--target|-t]',
                         'defaults' => [
-                            'controller' => 'WellCart\SchemaMigration\Controller\Console',
+                            'controller' => 'SchemaMigration::Console',
                             'action'     => 'command'
                         ],
                     ],
