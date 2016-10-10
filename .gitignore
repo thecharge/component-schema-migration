@@ -11,11 +11,11 @@ Thumbs.db
 .settings
 composer.lock
 /vendor
-/report
+/build
 /bin
 apigility-ui
 *~
-clover.xml
+report.xml
 codeception.yml
 *.suite.yml
 maintenance.flag

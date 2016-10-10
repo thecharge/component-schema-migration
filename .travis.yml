@@ -47,7 +47,7 @@ script: ../bin/phpunit
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover report/clover.xml
+  - php ocular.phar code-coverage:upload --format=php-clover build/report.xml
   - ../bin/coveralls
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -u root -e 'DROP DATABASE IF EXISTS wellcart'; fi"
   - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'DROP DATABASE IF EXISTS wellcart;' -U postgres; fi"
