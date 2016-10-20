@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-schema-migration",
   "description": "Integrates the Phinx database migration tool into a WellCart application.",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",
