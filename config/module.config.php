@@ -8,7 +8,14 @@
 
 namespace WellCart\SchemaMigration;
 
+use WellCart\SchemaMigration\Console\PhinxApplication;
+
 return [
+  'service_manager' => array(
+    'factories' => array(
+      PhinxApplication::class => Factory\PhinxApplicationFactory::class,
+    ),
+  ),
     'controllers'      => [
         'aliases' => [
             'SchemaMigration::Console' => Controller\ConsoleController::class,

@@ -27,10 +27,6 @@ class PhinxApplication extends AbstractApplication
         parent::__construct(
             $version
         );
-
-        if (!function_exists('application')) {
-            $this->add(new Command\Init());
-        }
         $this->addCommands(
             array(
                 new Command\Create(),
