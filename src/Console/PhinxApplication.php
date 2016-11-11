@@ -11,6 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\SchemaMigration\Console;
 
 use Phinx\Console\PhinxApplication as AbstractApplication;
+use Symfony\Component\Console\Application;
 use WellCart\SchemaMigration\Console\Command;
 
 class PhinxApplication extends AbstractApplication
@@ -24,9 +25,7 @@ class PhinxApplication extends AbstractApplication
      */
     public function __construct($version)
     {
-        parent::__construct(
-            $version
-        );
+        Application::__construct($version);
         $this->addCommands(
             array(
                 new Command\Create(),

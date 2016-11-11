@@ -67,7 +67,7 @@ class Module implements
     $cli = $this->container->get(PhinxApplication::class);
     $output = new PropertyOutput();
     $cli->run(new StringInput('list'), $output);
-    //return $output->getMessage();
+   return $output->getMessage();
   }
 
   /**
