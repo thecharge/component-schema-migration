@@ -36,7 +36,6 @@ before_install:
   - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'CREATE DATABASE wellcart;' -U postgres; fi"
   - chmod 0777 ./bin/
   - chmod 0777 ./bin/wellcart
-  - chmod 0777 ./bin/wellcart-schema-migration
   - bin/wellcart wellcart:setup --db-driver=$DB_DRIVER --db-host=127.0.0.1 --db-port=$DB_PORT --db-name=wellcart --db-username=$DB_USERNAME --admin-email=test@example.com --admin-password=qa123123 --admin-first-name=Tester --admin-last-name=Account --base-path=http://localhost/ --website-name=Testing
   - composer show
 

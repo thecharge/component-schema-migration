@@ -80,7 +80,5 @@
       "tests/unit/"
     ]
   },
-  "bin": [
-    "bin/wellcart-schema-migration"
-  ]
+  "bin": []
 }
