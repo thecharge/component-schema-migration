@@ -13,13 +13,14 @@ namespace WellCart\SchemaMigration\Factory\Router;
 use Interop\Container\ContainerInterface;
 use WellCart\SchemaMigration\Console\PhinxApplication;
 use WellCart\SchemaMigration\Router\Route;
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
-class RouteFactory
+class RouteFactory  implements FactoryInterface
 {
-    public function __invoke(ContainerInterface $container): Route
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null): Route
     {
         $application = $container
-            ->getServiceLocator()
             ->get(PhinxApplication::class);
         return new Route(
             $application,
@@ -28,5 +29,13 @@ class RouteFactory
                 'action'     => 'command'
             )
         );
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function createService(ServiceLocatorInterface $serviceLocator)
+    {
+        return $this($serviceLocator->getServiceLocator(), Route::class);
     }
 }

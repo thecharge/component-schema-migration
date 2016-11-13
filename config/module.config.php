@@ -20,8 +20,8 @@ return [
         'aliases'    => [
             'SchemaMigration::Console' => Controller\ConsoleController::class,
         ],
-        'invokables' => [
-            Controller\ConsoleController::class => Controller\ConsoleController::class,
+        'factories' => [
+            Controller\ConsoleController::class => Factory\Controller\ConsoleControllerFactory::class,
         ],
     ],
     'route_manager'   => array(
