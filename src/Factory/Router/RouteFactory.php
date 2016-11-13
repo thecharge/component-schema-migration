@@ -26,7 +26,7 @@ class RouteFactory  implements FactoryInterface
             $application,
             array(
                 'controller' => 'SchemaMigration::Console',
-                'action'     => 'command'
+                'action'     => 'handle'
             )
         );
     }

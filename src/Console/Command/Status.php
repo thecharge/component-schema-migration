@@ -15,4 +15,12 @@ use Phinx\Console\Command\Status as AbstractCommand;
 class Status extends AbstractCommand
 {
     use PhinxCommandTrait;
+    /**
+     * @inheritDoc
+     */
+    protected function configure()
+    {
+        parent::configure();
+        $this->setName('migration:status');
+    }
 }

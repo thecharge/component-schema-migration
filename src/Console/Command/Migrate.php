@@ -15,4 +15,12 @@ use Phinx\Console\Command\Migrate as AbstractCommand;
 class Migrate extends AbstractCommand
 {
     use PhinxCommandTrait;
+    /**
+     * @inheritDoc
+     */
+    protected function configure()
+    {
+        parent::configure();
+        $this->setName('migration:migrate');
+    }
 }

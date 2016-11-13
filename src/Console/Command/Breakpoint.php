@@ -15,4 +15,12 @@ use Phinx\Console\Command\Breakpoint as AbstractCommand;
 class Breakpoint extends AbstractCommand
 {
     use PhinxCommandTrait;
+    /**
+     * @inheritDoc
+     */
+    protected function configure()
+    {
+        parent::configure();
+        $this->setName('migration:breakpoint');
+    }
 }

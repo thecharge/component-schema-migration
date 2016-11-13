@@ -34,7 +34,7 @@ class ConsoleController extends AbstractActionController
     /**
      * Index action - runs the console application
      */
-    public function cliAction()
+    public function handleAction()
     {
         $exitCode = $this->application->run(new RequestInput($this->getRequest()));
         if (is_numeric($exitCode)) {

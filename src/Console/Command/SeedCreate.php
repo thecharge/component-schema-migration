@@ -15,4 +15,13 @@ use Phinx\Console\Command\SeedCreate as AbstractCommand;
 class SeedCreate extends AbstractCommand
 {
     use PhinxCommandTrait;
+
+    /**
+     * @inheritDoc
+     */
+    protected function configure()
+    {
+        parent::configure();
+        $this->setName('migration:seed:create');
+    }
 }

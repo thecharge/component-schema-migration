@@ -15,4 +15,12 @@ use Phinx\Console\Command\SeedRun as AbstractCommand;
 class SeedRun extends AbstractCommand
 {
     use PhinxCommandTrait;
+    /**
+     * @inheritDoc
+     */
+    protected function configure()
+    {
+        parent::configure();
+        $this->setName('migration:seed:run');
+    }
 }

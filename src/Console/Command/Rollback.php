@@ -15,4 +15,12 @@ use Phinx\Console\Command\Rollback as AbstractCommand;
 class Rollback extends AbstractCommand
 {
     use PhinxCommandTrait;
+    /**
+     * @inheritDoc
+     */
+    protected function configure()
+    {
+        parent::configure();
+        $this->setName('migration:rollback');
+    }
 }
