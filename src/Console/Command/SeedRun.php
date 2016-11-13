@@ -15,6 +15,7 @@ use Phinx\Console\Command\SeedRun as AbstractCommand;
 class SeedRun extends AbstractCommand
 {
     use PhinxCommandTrait;
+
     /**
      * @inheritDoc
      */

@@ -36,7 +36,9 @@ class ConsoleController extends AbstractActionController
      */
     public function handleAction()
     {
-        $exitCode = $this->application->run(new RequestInput($this->getRequest()));
+        $exitCode = $this->application->run(
+            new RequestInput($this->getRequest())
+        );
         if (is_numeric($exitCode)) {
             $model = $this->createConsoleModel();
             $model->setErrorLevel($exitCode);

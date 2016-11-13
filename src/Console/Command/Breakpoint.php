@@ -15,6 +15,7 @@ use Phinx\Console\Command\Breakpoint as AbstractCommand;
 class Breakpoint extends AbstractCommand
 {
     use PhinxCommandTrait;
+
     /**
      * @inheritDoc
      */

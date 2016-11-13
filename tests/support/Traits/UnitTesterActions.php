@@ -28,11 +28,6 @@ trait UnitTesterActions
     }
 
     /**
-     * @return \Codeception\Scenario
-     */
-    abstract protected function getScenario();
-
-    /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
      * Checks that two variables are not equal
@@ -49,7 +44,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertNotEquals', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -70,7 +64,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -89,7 +82,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -107,7 +99,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertGreaterThan', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -129,7 +120,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -147,7 +137,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertLessThan', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -169,7 +158,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -187,7 +175,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertContains', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -207,7 +194,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -225,7 +211,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertRegExp', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -245,7 +230,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -262,7 +246,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertEmpty', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -281,7 +264,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -298,7 +280,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertNull', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -317,7 +298,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -334,7 +314,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertTrue', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -353,7 +332,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -371,7 +349,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -388,7 +365,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertFileNotExists', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -409,7 +385,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -426,7 +401,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -441,7 +415,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertIsEmpty', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -458,7 +431,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertArrayHasKey', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -478,7 +450,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -494,7 +465,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('assertInstanceOf', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -512,7 +482,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -529,7 +498,6 @@ trait UnitTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -545,7 +513,6 @@ trait UnitTesterActions
             new \Codeception\Step\Action('fail', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -583,4 +550,9 @@ trait UnitTesterActions
             new \Codeception\Step\Action('expectException', func_get_args())
         );
     }
+
+    /**
+     * @return \Codeception\Scenario
+     */
+    abstract protected function getScenario();
 }

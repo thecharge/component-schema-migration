@@ -44,6 +44,18 @@ class Route implements RouteInterface
     }
 
     /**
+     * Disabled.
+     *
+     * {@inheritDoc}
+     *
+     * @throws \BadMethodCallException this method is disabled
+     */
+    public static function factory($options = array())
+    {
+        throw new \BadMethodCallException('Unsupported');
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function match(Request $request)
@@ -77,17 +89,5 @@ class Route implements RouteInterface
     public function getAssembledParams()
     {
         return array();
-    }
-
-    /**
-     * Disabled.
-     *
-     * {@inheritDoc}
-     *
-     * @throws \BadMethodCallException this method is disabled
-     */
-    public static function factory($options = array())
-    {
-        throw new \BadMethodCallException('Unsupported');
     }
 }

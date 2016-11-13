@@ -27,11 +27,6 @@ trait AcceptanceTesterActions
     }
 
     /**
-     * @return \Codeception\Scenario
-     */
-    abstract protected function getScenario();
-
-    /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
      * Authenticates user for HTTP_AUTH
@@ -49,7 +44,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -71,7 +65,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Condition('amOnUrl', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -103,7 +96,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -134,7 +126,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -161,7 +152,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('haveHttpHeader', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -191,7 +181,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -215,7 +204,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Condition('amOnPage', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -258,7 +246,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('click', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -343,7 +330,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -425,7 +411,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -473,7 +458,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -520,7 +504,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Assertion('dontSeeInSource', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -575,7 +558,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -628,7 +610,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Assertion('dontSeeLink', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -683,7 +664,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -732,7 +712,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -787,7 +766,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -841,7 +819,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -892,7 +869,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -945,7 +921,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -970,7 +945,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('grabFromCurrentUrl', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1025,7 +999,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1076,7 +1049,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1139,7 +1111,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1200,7 +1171,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Assertion('dontSeeInField', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1349,7 +1319,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1458,7 +1427,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1642,7 +1610,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1666,7 +1633,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('fillField', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1710,7 +1676,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1733,7 +1698,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1755,7 +1719,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('uncheckOption', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1781,7 +1744,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1801,7 +1763,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('sendAjaxGetRequest', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1834,7 +1795,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1864,7 +1824,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1892,7 +1851,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1918,7 +1876,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('grabAttributeFrom', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1955,7 +1912,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -1970,7 +1926,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('grabValueFrom', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -1998,7 +1953,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2018,7 +1972,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('grabCookie', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -2073,7 +2026,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2117,7 +2069,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2137,7 +2088,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('resetCookie', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -2204,7 +2154,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2261,7 +2210,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Assertion('dontSeeElement', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -2320,7 +2268,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2373,7 +2320,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -2428,7 +2374,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2459,7 +2404,6 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Assertion('seePageNotFound', func_get_args())
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -2499,7 +2443,6 @@ trait AcceptanceTesterActions
             )
         );
     }
-
 
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
@@ -2550,7 +2493,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2588,7 +2530,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2616,7 +2557,6 @@ trait AcceptanceTesterActions
         );
     }
 
-
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
@@ -2632,4 +2572,9 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('moveBack', func_get_args())
         );
     }
+
+    /**
+     * @return \Codeception\Scenario
+     */
+    abstract protected function getScenario();
 }

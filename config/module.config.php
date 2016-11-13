@@ -17,7 +17,7 @@ return [
         ),
     ),
     'controllers'     => [
-        'aliases'    => [
+        'aliases'   => [
             'SchemaMigration::Console' => Controller\ConsoleController::class,
         ],
         'factories' => [
