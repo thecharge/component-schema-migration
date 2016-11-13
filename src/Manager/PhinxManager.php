@@ -56,10 +56,6 @@ class PhinxManager implements ColorInterface
         $argv = $_SERVER['argv'];
         array_shift($_SERVER['argv']);
 
-
-        $_SERVER['argv'][]
-            = "--configuration={$this->config['schema-migration']['phinx-config']}";
-
         /**
          * Run Phinx
          */

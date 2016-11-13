@@ -11,13 +11,13 @@ namespace WellCart\SchemaMigration;
 use WellCart\SchemaMigration\Console\PhinxApplication;
 
 return [
-  'service_manager' => array(
-    'factories' => array(
-      PhinxApplication::class => Factory\PhinxApplicationFactory::class,
+    'service_manager'  => array(
+        'factories' => array(
+            PhinxApplication::class => Factory\PhinxApplicationFactory::class,
+        ),
     ),
-  ),
     'controllers'      => [
-        'aliases' => [
+        'aliases'    => [
             'SchemaMigration::Console' => Controller\ConsoleController::class,
         ],
         'invokables' => [
@@ -40,8 +40,6 @@ return [
         ],
     ],
     'schema-migration' => [
-        'zf2-config'   => WELLCART_ROOT . 'config/autoload/db.global.php',
-        'phinx-config' => __DIR__ . '/phinx.php',
         'migrations'   => WELLCART_STORAGE_PATH . 'migrations',
     ],
 ];
