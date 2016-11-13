@@ -31,7 +31,7 @@ class Manager extends AbstractManager
     public function setMigrations(array $migrations)
     {
         $this->migrations = $migrations;
-        $this->mergeMigrationsFromModules($migrations);
+        $this->mergeMigrationsFromModules();
         return $this;
     }
 

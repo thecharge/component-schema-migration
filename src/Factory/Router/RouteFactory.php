@@ -18,7 +18,9 @@ class RouteFactory
 {
     public function __invoke(ContainerInterface $container): Route
     {
-        $application = $container->get(PhinxApplication::class);
+        $application = $container
+            ->getServiceLocator()
+            ->get(PhinxApplication::class);
         return new Route(
             $application,
             array(

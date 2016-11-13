@@ -11,12 +11,12 @@ namespace WellCart\SchemaMigration;
 use WellCart\SchemaMigration\Console\PhinxApplication;
 
 return [
-    'service_manager'  => array(
+    'service_manager' => array(
         'factories' => array(
             PhinxApplication::class => Factory\PhinxApplicationFactory::class,
         ),
     ),
-    'controllers'      => [
+    'controllers'     => [
         'aliases'    => [
             'SchemaMigration::Console' => Controller\ConsoleController::class,
         ],
@@ -24,12 +24,12 @@ return [
             Controller\ConsoleController::class => Controller\ConsoleController::class,
         ],
     ],
-    'route_manager' => array(
+    'route_manager'   => array(
         'factories' => array(
             'wellcart-schema-migration' => Factory\Router\RouteFactory::class,
         ),
     ),
-    'console'          => [
+    'console'         => [
         'router' => [
             'routes' => [
                 'wellcart-schema-migration' => [
@@ -37,8 +37,5 @@ return [
                 ],
             ],
         ],
-    ],
-    'schema-migration' => [
-        'migrations'   => WELLCART_STORAGE_PATH . 'migrations',
     ],
 ];
