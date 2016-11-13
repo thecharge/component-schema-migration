@@ -10,55 +10,37 @@ declare(strict_types = 1);
 
 namespace WellCart\SchemaMigration\Controller;
 
-use WellCart\SchemaMigration\Manager\PhinxManager;
-use Zend\Console\Request as ConsoleRequest;
-use Zend\Mvc\Controller\AbstractActionController;
+use DoctrineModule\Component\Console\Input\RequestInput;
+use WellCart\Mvc\Controller\AbstractActionController;
+use WellCart\SchemaMigration\Console\PhinxApplication;
 
 class ConsoleController extends AbstractActionController
 {
     /**
-     * @var PhinxManager
+     * @var \Symfony\Component\Console\Application
      */
-    protected $manager;
+    protected $application;
 
     /**
-     * Display phinx help text
+     * Constructor.
      *
-     * @return String
-     * @throws RuntimeException
+     * @param PhinxApplication $application
      */
-    public function commandAction()
+    public function __construct(PhinxApplication $application)
     {
-        /**
-         * Enforce valid console request
-         */
-        $request = $this->getRequest();
-        if (!$request instanceof ConsoleRequest) {
-            throw new \RuntimeException(
-                'You can only use this action from a console!'
-            );
-        }
-
-        /**
-         * Run the custom command
-         */
-        return $this->getPhinxManager()->command();
+        $this->application = $application;
     }
 
     /**
-     * Returns the PhinxManager class
-     *
-     * @return PhinxManager
+     * Index action - runs the console application
      */
-    protected function getPhinxManager()
+    public function cliAction()
     {
-        if (!$this->manager) {
-            $this->manager = new PhinxManager(
-                $this->getServiceLocator()->get('console'),
-                $this->getServiceLocator()->get('config')
-            );
+        $exitCode = $this->application->run(new RequestInput($this->getRequest()));
+        if (is_numeric($exitCode)) {
+            $model = $this->createConsoleModel();
+            $model->setErrorLevel($exitCode);
+            return $model;
         }
-
-        return $this->manager;
     }
 }
