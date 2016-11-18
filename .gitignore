@@ -19,4 +19,5 @@ report.xml
 codeception.yml
 *.suite.yml
 maintenance.flag
+Maintenance.html
 .env
